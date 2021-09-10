@@ -1,12 +1,9 @@
 <template>
   <auth>
-    <div class="login p-50">
+      <div class="login p-50">
       <h1 class="mb-2">Justified Technologies</h1>
       <p>Welcome back, please login to your account.</p>
-      <form
-        action="http://themes.potenzaglobalsolutions.com/html/mentor-bootstrap-4-admin-dashboard-template/auth-login.html"
-        class="mt-3 mt-sm-5"
-      >
+      <form @submit.prevent="handleLogin">
         <div class="row">
           <div class="col-12">
             <div class="form-group">
@@ -30,10 +27,10 @@
             </div>
           </div>
           <div class="col-12 mt-3">
-            <a href="index.html" class="btn btn-primary text-uppercase">Sign In</a>
+            <button type="submit" class="btn btn-primary text-uppercase">Sign In</button>
           </div>
           <div class="col-12 mt-3">
-            <p>Don't have an account ?<a href="auth-register.html"> Sign Up</a></p>
+            <p>Don't have an account ?<router-link to="/register"> Sign Up</router-link></p>
           </div>
         </div>
       </form>

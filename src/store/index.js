@@ -3,9 +3,9 @@ import axios from "axios";
 
 // Create a new store instance.
 
-const state = {
+const state = ()=> ({
 	tasks: [],
-};
+});
 const actions = {
 	async fetchTasks({ commit }) {
 		try {

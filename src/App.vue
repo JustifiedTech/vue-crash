@@ -1,14 +1,15 @@
 <template>
-  <!-- <div class="container"> -->
-    <!-- <Header @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" /> -->
-    <router-view :showAddTask="showAddTask"></router-view>
-    <!-- <Footer /> -->
-  <!-- </div> -->
+<div class="app">
+<div class="app-wrap">
+  <router-view :showAddTask="showAddTask"></router-view>
+  
+</div>
+  
+</div>
 </template>
 
 <script>
 export default {
-  
   name: "App",
   components: {
     Header: require("@/components/Header").default,
@@ -19,11 +20,7 @@ export default {
       showAddTask: false,
     };
   },
-  methods: {
-    toggleAddTask() {
-      this.showAddTask = !this.showAddTask;
-    },
-  },
+  methods: {},
 };
 </script>
 
